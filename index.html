@@ -1,34 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Teste GitHub Pages</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f4f8;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-            color: #333;
-        }
-        h1 {
-            color: #0078d7;
-        }
-        p {
-            font-size: 1.2rem;
-        }
-        footer {
-            margin-top: 50px;
-            font-size: 0.9rem;
-            color: #666;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Login - Plataforma Escolar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f2f9ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-container h2 {
+      margin-bottom: 30px;
+      text-align: center;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #5da2c5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover:enabled {
+      background-color: #4887a7;
+    }
+
+    button:disabled {
+      background-color: #a0b9ce;
+      cursor: not-allowed;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+      min-height: 18px;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Olá! Seu GitHub Pages está funcionando!</h1>
-    <p>Este é um arquivo index.html de teste.</p>
-    <footer>Desenvolvido por você 🚀</footer>
+
+  <div class="login-container">
+    <div class="logo">
+      <img src="assets/images/logopla.png" alt="Logo Plataforma" />
+    </div>
+    <h2>Login do Aluno</h2>
+
+    <form onsubmit="return validarLogin()">
+      <input type="text" id="usuario" placeholder="Usuário ou Matrícula" required />
+      <input type="password" id="senha" placeholder="Senha" required />
+      <div class="error" id="erroLogin"></div>
+      <button type="submit" id="btnEntrar">Entrar</button>
+    </form>
+  </div>
+
+  <script>
+    const usuarioInput = document.getElementById('usuario');
+    const senhaInput = document.getElementById('senha');
+    const erro = document.getElementById('erroLogin');
+    const btnEntrar = document.getElementById('btnEntrar');
+
+    usuarioInput.addEventListener('input', () => erro.textContent = '');
+    senhaInput.addEventListener('input', () => erro.textContent = '');
+
+    function validarLogin() {
+      const usuario = usuarioInput.value.trim();
+      const senha = senhaInput.value.trim();
+
+      const usuarioValido = "202230412";
+      const senhaValida = "16082007";
+
+      if (usuario === usuarioValido && senha === senhaValida) {
+        btnEntrar.disabled = true;
+        btnEntrar.textContent = 'Entrando...';
+
+        setTimeout(() => {
+          window.location.href = "areaAluno.html";
+        }, 500);
+
+        return false;
+      } else {
+        erro.textContent = "Usuário ou senha incorretos.";
+
+        setTimeout(() => {
+          erro.textContent = '';
+        }, 5000);
+
+        return false;
+      }
+    }
+  </script>
+
 </body>
 </html>
