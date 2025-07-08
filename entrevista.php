@@ -1,0 +1,122 @@
+<?php require_once('config/config.php'); ?>
+
+<?php require_once('header.php'); ?>
+
+
+        <main>
+        <style>/* Reset básico */
+
+
+
+  
+    .menu-icon {
+      font-size: 24px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    .logo {
+      height: 40px;
+      margin-right: 15px;
+    }
+
+    .school-name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .container {
+      padding: 40px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .entrevista-card {
+      background-color: #6A9CE6;
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+      max-width: 600px;
+    }
+
+    .entrevista-card p {
+      margin: 4px 0;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .btn {
+      background-color: #fff;
+      color: #000;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e0e0e0;
+    }
+
+   
+
+    @media (max-width: 768px) {
+      .entrevista-card {
+        width: 100%;
+      }
+    }
+    
+
+</style>
+</head>
+<body>
+
+
+  <div class="container">
+    <h2>Entrevista Marcadas</h2>
+
+    <!-- Entrevista Confirmada -->
+    <div class="entrevista-card">
+      <p><strong>Nome da Empresa:</strong> SEC EDUCAÇÃO</p>
+      <p><strong>Cargo:</strong> Desenvolvedor Web</p>
+      <p><strong>Data:</strong> 30/07/2025</p>
+      <p><strong>Hora:</strong> 14:00</p>
+      <p><strong>Local:</strong> Edifício Salvador, Avenida Centenário 25, Comércio</p>
+      <p><strong>Status:</strong> Confirmada</p>
+      <div class="button-group">
+        <button class="btn">Cancelar</button>
+      </div>
+    </div>
+
+    <!-- Entrevista Pendente -->
+    <div class="entrevista-card">
+      <p><strong>Nome da Empresa:</strong> Indústria Dias</p>
+      <p><strong>Cargo:</strong> Estágio Administração</p>
+      <p><strong>Data:</strong> 27/07/2025</p>
+      <p><strong>Hora:</strong> 10:00</p>
+      <p><strong>Local:</strong> ONLINE (ZOOM)</p>
+      <p><strong>Status:</strong> Pendente</p>
+      <div class="button-group">
+        <button class="btn">Confirmar</button>
+        <button class="btn">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer></footer>
+
+</body>
+    
+    
+
+        <!-- <?php require_once('footer.php'); ?> -->

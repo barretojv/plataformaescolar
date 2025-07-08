@@ -1,0 +1,143 @@
+<?php require_once('config/config.php'); ?>
+
+<?php require_once('header.php'); ?>
+
+        <main>
+        <style>/* Reset básico */
+
+
+
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section p {
+      margin: 8px 0;
+    }
+
+    .btn {
+      background-color: #6A9CE6;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #5586d1;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    
+    .vaga-card {
+      background-color: #6A9CE6;
+      color: white;
+      padding: 20px;
+      border-radius: 100px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 600px;
+    }
+
+    .vaga-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vaga-info strong {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .vaga-info span {
+      font-size: 13px;
+    }
+
+    .btn-candidatar {
+      background-color: white;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-candidatar:hover {
+      background-color: #e0e0e0;
+    }
+
+    
+
+    @media (max-width: 768px) {
+      .vaga-card {
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 20px;
+        gap: 10px;
+      }
+
+      .btn-candidatar {
+        align-self: center;
+      }
+    }
+
+</style>
+</head>
+<body>
+
+    
+
+  <div class="container">
+    <h2>Vagas De Estágio</h2>
+
+    <div class="vaga-card">
+      <div class="vaga-info">
+        <strong>Estágio em Desenvolvimento Web</strong>
+        <span>SEC EDUCAÇÃO</span>
+        <span>Conhecimento em JAVA</span>
+      </div>
+      <button class="btn-candidatar">Candidatar-se</button>
+    </div>
+
+    <div class="vaga-card">
+      <div class="vaga-info">
+        <strong>Estágio em Redes De Computadores</strong>
+        <span>Teolz</span>
+        <span>Noções de configuração de redes</span>
+      </div>
+      <button class="btn-candidatar">Candidatar-se</button>
+    </div>
+
+    <div class="vaga-card">
+      <div class="vaga-info">
+        <strong>Estágio em Administração</strong>
+        <span>Indústria Dias</span>
+        <span>Curso técnico na área de administração</span>
+      </div>
+      <button class="btn-candidatar">Candidatar-se</button>
+    </div>
+  </div>
+
+</body>
+    
+    
+
+        <?php require_once('footer.php'); ?>

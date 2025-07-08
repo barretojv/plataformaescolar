@@ -1,0 +1,68 @@
+<?php require_once('config/config.php'); ?>
+    <?php require_once('header.php'); ?>
+
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .grid-opcoes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 40px;
+      max-width: 800px;
+      margin: 60px auto;
+      justify-items: center;
+    }
+
+    .opcao {
+      background-color: #5da2c5;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 40px 20px;
+      width: 180px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .opcao:hover {
+      background-color: #4a90af;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .busca-login {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .grid-opcoes {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+    }
+  </style>
+<!-- Main Content -->
+<main>
+  <div class="container my-4">
+    <div class="row mt-4 d-flex justify-content-center">
+      <div class="grid-opcoes">
+        <a href="#" class="opcao">Área Do Aluno</a>
+        <a href="#" class="opcao">Biblioteca Virtual</a>
+        <a href="#" class="opcao">Área de Estágio e Emprego</a>
+        <a href="#" class="opcao">Painel de Aviso</a>
+        <a href="#" class="opcao">Fórum de Discussão</a>
+        <a href="#" class="opcao">Ferramentas Acadêmicas</a>
+      </div>
+    </div>
+  </div>
+</main>
