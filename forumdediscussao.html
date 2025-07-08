@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Fórum de Discussão</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e9ecef;
+    }
+
+    /* NOVO HEADER / NAVBAR */
+    .custom-navbar {
+      background-color: #ffffff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-area img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .logo-area span {
+      font-size: 1.2rem;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-buttons a {
+      background-color: #78aefc;
+      color: white;
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 0.95rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #5a96f0;
+    }
+
+    h2 {
+      text-align: center;
+      color: #343a40;
+      margin-bottom: 40px;
+    }
+
+    .forum-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      color: #495057;
+    }
+
+    .card p {
+      margin: 6px 0;
+      color: #6c757d;
+    }
+
+    .responder-btn {
+      margin-top: 12px;
+      padding: 8px 16px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .responder-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .resposta-professor {
+      margin-top: 15px;
+      padding: 12px 15px;
+      background-color: #f8f9fa;
+      border-left: 5px solid #5da2c5;
+      border-radius: 8px;
+    }
+
+    .resposta-professor p {
+      margin: 5px 0;
+      color: #495057;
+    }
+
+    .resposta-professor .autor {
+      font-weight: bold;
+      color: #343a40;
+    }
+
+    .resposta-professor .data {
+      font-size: 12px;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Navbar igual ao seu modelo -->
+  <header class="custom-navbar">
+    <div class="logo-area">
+      <img src="assets/images/logopla.png"Logo CEAAT" />
+      <span>CEAAT</span>
+    </div>
+    <nav class="nav-buttons">
+      <a href="index.html">Início</a>
+      <a href="areaAluno.html">Área do Aluno</a>
+      <a href="vagasdeestagio.html">Estágios</a>
+      <a href="Curriculo.html">Currículo</a>
+      <a href="forumdediscussao.html">Fórum</a>
+      <a href="bibliotecavirtual.html">Biblioteca </a>
+      <a href="cronograma.html">Cronograma</a>
+      <a href="listadedisciplina.html">lista de disciplina </a>
+      <a href="index.html">Sair</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Fórum de Discussão</h2>
+
+    <div class="forum-grid">
+      <!-- Exemplo para cada disciplina abaixo -->
+
+      <div class="card">
+        <h3>P.VIS</h3>
+        <p><strong>Dúvida:</strong> Como fazer um projeto visual no Figma?</p>
+        <p><strong>Aluno:</strong> Júlia S.</p>
+        <p><strong>Data:</strong> 06/07/2025</p>
+        <div class="resposta-professor">
+          <p class="autor">Prof. Daniel</p>
+          <p class="data">06/07/2025</p>
+          <p>Júlia, comece com o wireframe e depois defina a paleta de cores. Podemos revisar seu layout na próxima aula prática.</p>
+        </div>
+        <button class="responder-btn">Responder</button>
+      </div>
+
+      <div class="card">
+        <h3>A.P.SI</h3>
+        <p><strong>Dúvida:</strong> Qual a diferença entre front-end e back-end?</p>
+        <p><strong>Aluno:</strong> Breno A.</p>
+        <p><strong>Data:</strong> 06/07/2025</p>
+        <div class="resposta-professor">
+          <p class="autor">Prof. Lucas Noronha</p>
+          <p class="data">06/07/2025</p>
+          <p>O front-end é a interface do usuário, já o back-end é a lógica por trás. Vamos ver isso na aula de quarta.</p>
+        </div>
+        <button class="responder-btn">Responder</button>
+      </div>
+
+      <div class="card">
+        <h3>Matemática</h3>
+        <p><strong>Dúvida:</strong> Como resolver equações do segundo grau?</p>
+        <p><strong>Aluno:</strong> Gabriel M.</p>
+        <p><strong>Data:</strong> 05/07/2025</p>
+        <div class="resposta-professor">
+          <p class="autor">Profª. Geisa</p>
+          <p class="data">05/07/2025</p>
+          <p>Gabriel, basta aplicar a fórmula de Bhaskara: Δ = b² - 4ac e depois x = (-b ± √Δ)/2a.</p>
+        </div>
+        <button class="responder-btn">Responder</button>
+      </div>
+
+      <div class="card">
+        <h3>Geografia</h3>
+        <p><strong>Dúvida:</strong> O que são placas tectônicas?</p>
+        <p><strong>Aluno:</strong> Lucas C.</p>
+        <p><strong>Data:</strong> 05/07/2025</p>
+        <div class="resposta-professor">
+          <p class="autor">Profª. Mércia</p>
+          <p class="data">05/07/2025</p>
+          <p>São grandes blocos rochosos da crosta terrestre que se movimentam e causam terremotos e vulcões.</p>
+        </div>
+        <button class="responder-btn">Responder</button>
+      </div>
+
+      <div class="card">
+        <h3>Física</h3>
+        <p><strong>Dúvida:</strong> Como funciona a força centrípeta?</p>
+        <p><strong>Aluno:</strong> André V.</p>
+        <p><strong>Data:</strong> 04/07/2025</p>
+        <div class="resposta-professor">
+          <p class="autor">Prof. Vinícius</p>
+          <p class="data">04/07/2025</p>
+          <p>É a força que mantém um corpo em movimento circular, sempre direcionada ao centro da trajetória.</p>
+        </div>
+        <button class="responder-btn">Responder</button>
+      </div>
+
+      <div class="card">
+        <h3>Biologia</h3>
+        <p><strong>Dúvida:</strong> O que são células-tronco?</p>
+        <p><strong>Aluno:</strong> Paula F.</p>
+        <p><strong>Data:</strong> 03/07/2025</p>
+        <div class="resposta-professor">
+          <p class="autor">Prof. Paranhos</p>
+          <p class="data">03/07/2025</p>
+          <p>São células com capacidade de se transformar em outros tipos celulares. Importantes para pesquisas médicas.</p>
+        </div>
+        <button class="responder-btn">Responder</button>
+      </div>
+
+      <div class="card">
+        <h3>Artes</h3>
+        <p><strong>Dúvida:</strong> O que é arte expressionista?</p>
+        <p><strong>Aluno:</strong> Renan T.</p>
+        <p><strong>Data:</strong> 02/07/2025</p>
+        <div class="resposta-professor">
+          <p class="autor">Profª. Erica Carneiro</p>
+          <p class="data">02/07/2025</p>
+          <p>É uma corrente artística que expressa emoções intensas e subjetividade, geralmente com cores fortes e distorções.</p>
+        </div>
+        <button class="responder-btn">Responder</button>
+      </div>
+
+      <div class="card">
+        <h3>L.PROG</h3>
+        <p><strong>Dúvida:</strong> Qual a função do “for” no Java?</p>
+        <p><strong>Aluno:</strong> Wesley N.</p>
+        <p><strong>Data:</strong> 02/07/2025</p>
+        <div class="resposta-professor">
+          <p class="autor">Profª. Acácia</p>
+          <p class="data">02/07/2025</p>
+          <p>O “for” executa uma repetição controlada. Ele tem início, condição e incremento definidos.</p>
+        </div>
+        <button class="responder-btn">Responder</button>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
