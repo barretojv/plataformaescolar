@@ -12,6 +12,35 @@
         background-color: #f9f9f9;
     }
 
+    /* Navbar */
+    .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar-brand img {
+      height: 50px;
+      margin-right: 10px;
+    }
+    .school-name {
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+    }
+    .nav-links a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: #6A9CE6;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover 
+    {
+      color: #5586d1;}
+
     .container {
         background-color: #fff;
         padding: 40px;
@@ -69,6 +98,21 @@
 </style>
 
 <body>
+
+      <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
+      <img src="assets/images/logopla.png" alt="Logo CEAAT" />
+      <span class="school-name">Colégio Estadual De Aplicação Anísio Teixeira</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="areaAluno.html">Área do Aluno</a>
+      <a href="vagasdeestagio.html">Estágios</a>
+      <a href="curriculo.html" class="fw-bold text-primary">Currículo</a>
+      <a href="login-reserva.html">Sair</a>
+    </div>
+  </nav>
 
 <div class="container">
     <h2>Área de Estágio e Emprego</h2>
