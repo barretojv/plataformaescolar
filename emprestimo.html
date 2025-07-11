@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Empréstimo de Livros - CEAAT</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f9ff;
+    }
+
+    .custom-navbar {
+      background-color: #ffffff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-area img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .logo-area span {
+      font-size: 1.2rem;
+      color: #000;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-buttons a {
+      background-color: #78aefc;
+      color: white;
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 0.95rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #5a96f0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 15px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #343a40;
+      margin-bottom: 25px;
+    }
+
+    ul.book-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+
+    ul.book-list li {
+      padding: 10px 15px;
+      border: 1px solid #5da2c5;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      background-color: #e7f0fc;
+      font-weight: bold;
+      color: #2c5282;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #5da2c5;
+    }
+
+    form input, form select {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    form button {
+      background-color: #5da2c5;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #468fb3;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="custom-navbar">
+    <div class="logo-area">
+      <img src="assets/images/logopla.png" alt="Logo CEAAT" />
+      <span>CEAAT</span>
+    </div>
+    <nav class="nav-buttons">
+      <a href="index.html">Início</a>
+      <a href="areaAluno.html">Área do Aluno</a>
+      <a href="vagasdeestagio.html">Estágios</a>
+      <a href="Curriculo.html">Currículo</a>
+      <a href="forumdediscussao.html">Fórum</a>
+      <a href="bibliotecavirtual.html">Conteúdos</a>
+      <a href="emprestimo.html">Empréstimo de Livros</a>
+      <a href="cronograma.html">Cronograma</a>
+      <a href="listadedisciplina.html">Lista de Disciplina</a>
+      <a href="entrevista.html">Entrevista</a>
+      <a href="index.html">Sair</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Empréstimo de Livros Físicos</h2>
+
+    <ul class="book-list" id="bookList">
+      <li>Dom Casmurro - Machado de Assis</li>
+      <li>O Cortiço - Aluísio Azevedo</li>
+      <li>Capitães da Areia - Jorge Amado</li>
+      <li>Memórias Póstumas de Brás Cubas - Machado de Assis</li>
+      <li>Iracema - José de Alencar</li>
+    </ul>
+
+    <form id="loanForm">
+      <label for="studentName">Nome do aluno:</label>
+      <input type="text" id="studentName" name="studentName" placeholder="Seu nome" required />
+
+      <label for="bookSelect">Livro para empréstimo:</label>
+      <select id="bookSelect" name="bookSelect" required>
+        <option value="" disabled selected>Selecione um livro</option>
+        <option value="Dom Casmurro - Machado de Assis">Dom Casmurro - Machado de Assis</option>
+        <option value="O Cortiço - Aluísio Azevedo">O Cortiço - Aluísio Azevedo</option>
+        <option value="Capitães da Areia - Jorge Amado">Capitães da Areia - Jorge Amado</option>
+        <option value="Memórias Póstumas de Brás Cubas - Machado de Assis">Memórias Póstumas de Brás Cubas - Machado de Assis</option>
+        <option value="Iracema - José de Alencar">Iracema - José de Alencar</option>
+      </select>
+
+      <button type="submit">Emprestar</button>
+    </form>
+
+    <p class="message" id="message"></p>
+  </div>
+
+  <script>
+    const form = document.getElementById('loanForm');
+    const message = document.getElementById('message');
+    const bookSelect = document.getElementById('bookSelect');
+    const bookList = document.getElementById('bookList');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const studentName = form.studentName.value.trim();
+      const selectedBook = form.bookSelect.value;
+
+      if (!studentName || !selectedBook) {
+        message.style.color = 'red';
+        message.textContent = 'Por favor, preencha todos os campos.';
+        return;
+      }
+
+      // Remove o livro da lista disponível
+      const options = bookList.querySelectorAll('li');
+      for(let li of options) {
+        if(li.textContent === selectedBook) {
+          bookList.removeChild(li);
+          break;
+        }
+      }
+
+      // Limpa o form
+      form.reset();
+
+      message.style.color = 'green';
+      message.textContent = `Livro "${selectedBook}" emprestado com sucesso para ${studentName}!`;
+    });
+  </script>
+
+</body>
+</html>
